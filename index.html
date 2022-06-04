@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.ico" />
+
+    <!-- General meta tags -->
+    <title>Preview | Mirasaki</title>
+    <meta
+      name="description"
+      content="Preview website development | The image below is being generated through a headless chromium instance using puppeteer-core, the content is being delivered over a serverless function hosted on Vercel."
+    />
+    <meta name="theme-color" content="#87CFEB" />
+
+    <!-- Facebook meta tags -->
+    <meta property="og:title" content="Preview | Mirasaki" />
+    <meta
+      property="og:description"
+      content="Preview website development | The image below is being generated through a headless chromium instance using puppeteer-core, the content is being delivered over a serverless function hosted on Vercel."
+    />
+    <meta
+      property="og:image"
+      content="https://ss.mirasaki.dev/api/screenshot?page=https://preview.mirasaki.dev"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+
+    <!-- Twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Preview | Mirasaki" />
+    <meta
+      name="twitter:description"
+      content="Preview website development | The image below is being generated through a headless chromium instance using puppeteer-core, the content is being delivered over a serverless function hosted on Vercel."
+    />
+
+    <!-- Links -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script>
+      const checkpoint = window.innerHeight;
+
+      window.addEventListener("scroll", (e) => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll <= checkpoint) {
+          opacity = 1 - currentScroll / checkpoint;
+        } else {
+          opacity = 0;
+        }
+        document.querySelector(".bottom-mountain-black-bar").style.opacity =
+          opacity + 0.05;
+        document.querySelector(".mountain-img").style.opacity = opacity;
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="background"></div>
+    <div class="main-content-wrapper">
+      <div class="top-container">
+        <h1 class="handwritten no-select">I'm Mirasaki</h1>
+        <h2
+          class="subtitle h2-shadow no-select"
+          style="margin: -50px auto 25px auto"
+        >
+          from <u>hobby</u>ist to full-stack
+        </h2>
+        <img
+          src="images/cloud.png"
+          alt="cloud-img"
+          class="top-cloud-img no-select"
+        />
+        <img
+          src="images/cloud.png"
+          alt="cloud-img"
+          class="bottom-cloud-img no-select"
+        />
+        <img
+          src="images/mountain.png"
+          alt="mountain-img"
+          class="mountain-img no-select"
+        />
+        <div class="bottom-mountain-black-bar"></div>
+      </div>
+      <div class="middle-container">
+        <div class="profile">
+          <img
+            class="profile-icon"
+            src="images/mirasaki-icon.png"
+            alt="mirasaki-icon"
+            width="125px"
+          />
+          <h2>
+            <img
+              src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/322/waving-hand_1f44b.png"
+              alt="wave-img"
+              style="margin-bottom: -5px; margin-right: 5px; width: 3rem"
+            />Hey there!
+          </h2>
+          <p class="introduction">
+            I am a self-taught developer, going from developing as a hobby to
+            someday becoming a full-stack web developer, as there's
+            <strong>nothing</strong> I'd rather do
+          </p>
+        </div>
+        <hr />
+        <div class="skills">
+          <h2>My Skills.</h2>
+          <div class="skill-row">
+            <img
+              class="desktop-img rounded"
+              src="images/discord.png"
+              alt="desktop-img"
+            />
+            <h3>Discord Bot Development</h3>
+            <p>
+              This all started as a hobby as I wanted to create Discord bots for
+              me and my friends to enjoy. It has since become my passion and
+              I've worked on several projects so far. You can check them out
+              <a href="https://mirasaki.dev">here</a>
+            </p>
+          </div>
+
+          <div class="skill-row skill-row-right">
+            <img
+              class="node-icon-png"
+              src="images/node-icon.png"
+              alt="node-icon-png"
+            />
+            <h3>Node JS</h3>
+            <p>
+              I have been working with Node JS (specifically non-browser
+              JavaScript) for about 2 years now. I'm very comfortable, and
+              fluent, using the language - but I strive to keep learning
+              everyday.
+            </p>
+          </div>
+
+          <div class="skill-row">
+            <img class="guitar-png" src="images/guitar.png" alt="guitar-png" />
+            <h3>Clone Hero</h3>
+            <p>
+              I'm a total nerd and absolutely addicted to
+              <a
+                class="footer-link"
+                href="https://discord.gg/nwcw3Zsm68"
+                target="_blank"
+                rel="noreferrer"
+                style="
+                  color: white;
+                  text-decoration: none;
+                  text-shadow: 1px 1px 1px hsl(0, 0%, 0%);
+                "
+              >
+                <i class="fa fa-external-link-square" aria-label="true"></i>
+                <dfn>Clone Hero</dfn>
+              </a>
+              - A rhythm game for the desktop - all you do is hit the colors at
+              the right time, which sounds incredibly dull, but is actually a
+              lot of fun and very satisfying once you get good at it.
+            </p>
+          </div>
+
+          <div class="skill-row skill-row-right">
+            <img
+              class="html-png"
+              src="images/html-icon.png"
+              alt="html-icon-png"
+            />
+            <h3>HTML</h3>
+            <p>
+              I've only just started web development, but I'm already impressed
+              by all the things I can do with HTML5 alone. Website structure is
+              very important and I intent on learning the best practices for all
+              things HTML
+            </p>
+          </div>
+
+          <div class="skill-row">
+            <img
+              class="css-icon-png"
+              src="images/css-icon.png"
+              alt="css-icon-png"
+            />
+            <h3>CSS</h3>
+            <p>
+              Now, I'm going to be honest. The first couple of weeks of web
+              development courses and guides were rough on me. I was completely
+              overwhelmed by the amount of CSS properties, wrappers and
+              libraries. But, I pushed through and eventually came to realize
+              and appreciate the beauty of the technology that is CSS3.
+            </p>
+          </div>
+
+          <div class="skill-row skill-row-right">
+            <img
+              class="hot-pot-png"
+              src="images/hot-pot.png"
+              alt="hot-pot-png"
+            />
+            <h3>Eggs &amp; Bacon</h3>
+            <p>
+              I make the world's best Eggs &amp; Bacon. Now it might not be much
+              - and it might just be all I can do in the kitchen - but it's true
+            </p>
+          </div>
+        </div>
+
+        <hr />
+        <div class="contact-me">
+          <h2>Get In Touch</h2>
+          <h3>Let's collaborate on a project or hire me!</h3>
+          <p>
+            Would you like to collaborate or do you wish to hire me for a
+            special Discord bot or project? Reach out to me!
+          </p>
+          <a class="btn contact-button" href="mailto:me@mirasaki.dev"
+            >CONTACT ME</a
+          >
+        </div>
+      </div>
+
+      <div class="bottom-container">
+        <a
+          class="footer-link"
+          href="https://discord.gg/nwcw3Zsm68"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i class="fa fa-external-link-square" aria-label="true"></i>
+          Discord</a
+        >
+        <a class="footer-link" href="https://mirasaki.dev/">Website</a>
+        <a
+          class="footer-link"
+          href="https://about.mirasaki.dev/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i class="fa fa-external-link-square" aria-label="true"></i>
+          About</a
+        >
+        <p>© Richard Hillebrand</p>
+      </div>
+    </div>
+  </body>
+</html>
